@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUPER SLOT CAR '98 — your deck drives the car</title>
+  <meta name="description" content="A retro roguelike deckbuilder slot-car racer. You don't steer — you draft cards mid-race in slow motion and watch your toy car overtake, crash, feud and win. Free Windows playtest build.">
+  <meta name="theme-color" content="#0e141c">
+  <link rel="canonical" href="https://superslotcar.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SUPER SLOT CAR '98">
+  <meta property="og:title" content="SUPER SLOT CAR '98 — your deck drives the car">
+  <meta property="og:description" content="A retro roguelike deckbuilder slot-car racer. Draft cards mid-race in slow motion — nitro, sabotage, scrap plating — and watch your toy car overtake, crash, feud and win. Free Windows playtest.">
+  <meta property="og:url" content="https://superslotcar.com/">
+  <meta property="og:image" content="https://superslotcar.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SUPER SLOT CAR '98 — your deck drives the car">
+  <meta name="twitter:description" content="A retro roguelike deckbuilder slot-car racer. Draft cards mid-race in slow motion and watch your toy car overtake, crash, feud and win. Free Windows playtest.">
+  <meta name="twitter:image" content="https://superslotcar.com/assets/og.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="preload" href="assets/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/VT323-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero">
+    <div class="checker-strip" aria-hidden="true"></div>
+    <p class="presents">SUPER-STATE PRESENTS</p>
+
+    <h1 class="logo">
+      <span class="logo-super">SUPER</span>
+      <span class="logo-main">SLOT&nbsp;CAR<span class="logo-badge" aria-label=" 98">'98</span></span>
+    </h1>
+
+    <p class="tagline">YOUR DECK DRIVES THE CAR</p>
+    <p class="hero-sub">
+      You don't steer. You draft cards mid-race in slow motion —
+      engine tuning, nitro, sabotage, scrap plating — and watch your toy car
+      overtake, crash, feud and win on a plastic track.
+      <strong>Slay the Spire's brains. Micro&nbsp;Machines' heart.</strong>
+    </p>
+
+    <div class="race-wrap pixel-frame">
+      <canvas id="race" width="360" height="200"
+        role="img"
+        aria-label="Animated toy slot-car race: four chunky pixel cars lap a plastic oval. Card pickups pop up beside the red player car — nitro bursts, sabotage — rivals wobble, crash and respawn."></canvas>
+      <noscript>
+        <img class="race-fallback" src="assets/hero_fallback.png" width="720" height="400"
+          alt="Top-down toy race track. The red player car trails skid marks while a NITRO BURST card pops up beside it. Three rival cars give chase.">
+        <style>#race{display:none}</style>
+      </noscript>
+    </div>
+
+    <div class="cta">
+      <a id="dl-btn" class="btn-dl" href="https://github.com/super-state/super-slot-car-98/releases/latest">
+        <span class="btn-glyph" aria-hidden="true"></span>DOWNLOAD FOR WINDOWS
+      </a>
+      <p class="dl-meta"><span id="dl-version">free playtest build</span></p>
+      <p class="dl-msg" id="dl-msg" hidden></p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= THE LOOP ======================= -->
+    <section id="loop" class="section">
+      <p class="kicker">THE LOOP</p>
+      <h2>DRAFT AT 200 SCALE-MPH</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>DRAFT THE CARD</h3>
+          <p>The race dips into slow motion and the deck deals you a choice.
+             Engine tuning, nitro, sabotage, scrap plating — pick your poison,
+             mid-corner, at scale speed.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>WATCH IT DRIVE</h3>
+          <p>No steering wheel. Your build takes the corner for you — every
+             stat you stack changes how the little car brakes, bites and
+             blasts out the other side.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>SETTLE THE GRUDGE</h3>
+          <p>Wreck a rival once, that's racing. Keep doing it and it gets
+             personal — the field remembers, and sooner or later somebody
+             calls you out for a duel.</p>
+        </li>
+      </ol>
+
+      <div class="hand" role="group" aria-label="A fanned hand of six cards from the game">
+        <figure class="card">
+          <img src="assets/cards/card_launch_control.png" width="512" height="512"
+            alt="Card art: a jet-engined dragster lighting its exhaust on the start line">
+          <figcaption>
+            <span class="card-name">LAUNCH CONTROL</span>
+            <span class="card-text">Gain +3 Acceleration. Instant response.</span>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/cards/card_nitro_burst.png" width="512" height="512"
+            alt="Card art: a race car trailing a huge flame plume down the straight">
+          <figcaption>
+            <span class="card-name">NITRO BURST</span>
+            <span class="card-text">Boost: +2.5 Top Speed for 6 seconds.</span>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/cards/card_guardian_angel.png" width="512" height="512"
+            alt="Card art: a car shrugging off a crash inside a halo of light">
+          <figcaption>
+            <span class="card-name">GUARDIAN ANGEL</span>
+            <span class="card-text">Gain 3 Shields. Practically bubble-wrapped.</span>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/cards/card_poltergeist.png" width="512" height="512"
+            alt="Card art: a ghostly skull looming over a car weaving through night traffic">
+          <figcaption>
+            <span class="card-name">POLTERGEIST</span>
+            <span class="card-text">Ghost for 15 seconds, but lose 0.5 Stability.</span>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/cards/card_demolition_derby.png" width="512" height="512"
+            alt="Card art: a muscle car ploughing through a smoking pile-up">
+          <figcaption>
+            <span class="card-name">DEMOLITION DERBY</span>
+            <span class="card-text">Ram for 12s. Scrap: every crash gives +0.5 Stability.</span>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="assets/cards/card_grudge_match.png" width="512" height="512"
+            alt="Card art: two cars locked wheel to wheel into a corner">
+          <figcaption>
+            <span class="card-name">GRUDGE MATCH</span>
+            <span class="card-text">Ram for 10 seconds and gain a Shield.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= THE FEUD ======================= -->
+    <section id="feud" class="section section-alt">
+      <p class="kicker">THE FEUD</p>
+      <h2>THE FIELD REMEMBERS</h2>
+      <p class="section-lede">
+        A named roster of ten racers with Mega-Drive faces and long memories.
+        Every dent has a name on it. Wreck <strong>AXEL GRIME</strong> one too
+        many times and he <em>will</em> find you — grudges stack until a rival
+        turns <strong class="hot">NEMESIS</strong> and calls you out for a
+        grudge-match duel.
+      </p>
+
+      <ul class="roster" aria-label="Eight of the ten roster racers">
+        <li><img src="assets/portraits/axel_grime.png" width="160" height="187" loading="lazy" alt="Pixel portrait of AXEL GRIME, a scowling mechanic in a flat cap"></li>
+        <li><img src="assets/portraits/turbo_terry.png" width="160" height="187" loading="lazy" alt="Pixel portrait of TURBO TERRY"></li>
+        <li><img src="assets/portraits/penny_piston.png" width="160" height="187" loading="lazy" alt="Pixel portrait of PENNY PISTON"></li>
+        <li><img src="assets/portraits/slick_ricardo.png" width="160" height="187" loading="lazy" alt="Pixel portrait of SLICK RICARDO"></li>
+        <li><img src="assets/portraits/mad_maude.png" width="160" height="187" loading="lazy" alt="Pixel portrait of MAD MAUDE"></li>
+        <li><img src="assets/portraits/nitro_nigel.png" width="160" height="187" loading="lazy" alt="Pixel portrait of NITRO NIGEL"></li>
+        <li><img src="assets/portraits/gearbox_gloria.png" width="160" height="187" loading="lazy" alt="Pixel portrait of GEARBOX GLORIA"></li>
+        <li><img src="assets/portraits/crash_gordon.png" width="160" height="187" loading="lazy" alt="Pixel portrait of CRASH GORDON"></li>
+      </ul>
+
+      <h3 class="bosses-title">1v1 BOSS SHOWDOWNS</h3>
+      <ul class="bosses">
+        <li>
+          <img src="assets/portraits/diesel_dan.png" width="160" height="187" loading="lazy"
+            alt="Pixel portrait of DIESEL DAN, a grinning bruiser in a sailor cap">
+          <p>Cup One's gatekeeper. Hits like a freight train, apologises like one too.</p>
+        </li>
+        <li>
+          <img src="assets/portraits/velvet_viper.png" width="160" height="187" loading="lazy"
+            alt="Pixel portrait of VELVET VIPER, cool eyes under a violet hood">
+          <p>Fast, clean, condescending. Never touches you. Never needs to.</p>
+        </li>
+        <li>
+          <img src="assets/portraits/baron_blitz.png" width="160" height="187" loading="lazy"
+            alt="Pixel portrait of BARON BLITZ, moustache, monocle and menace">
+          <p>The end of the line. Bring a monster, or bring a mop.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ====================== RACE TYPES ====================== -->
+    <section id="races" class="section">
+      <p class="kicker">THE CALENDAR</p>
+      <h2>SIX WAYS TO RACE</h2>
+      <p class="section-lede">Every race type is a <strong>build test</strong>, not a lap count.
+         The map tells you what it favours before you commit — then your deck sits the exam.</p>
+
+      <ul class="race-grid">
+        <li class="race race-sprint">
+          <span class="glyph g-sprint" aria-hidden="true"></span>
+          <h3>SPRINT</h3>
+          <p>Short and sharp. Favours boost&nbsp;+&nbsp;accel.</p>
+        </li>
+        <li class="race race-gp">
+          <span class="glyph g-gp" aria-hidden="true"></span>
+          <h3>GRAND PRIX</h3>
+          <p>An honest race. Favours nobody.</p>
+        </li>
+        <li class="race race-endurance">
+          <span class="glyph g-endurance" aria-hidden="true"></span>
+          <h3>ENDURANCE</h3>
+          <p>The long haul. Favours engine, scrap&nbsp;+&nbsp;sponsor builds.</p>
+        </li>
+        <li class="race race-traffic">
+          <span class="glyph g-traffic" aria-hidden="true"></span>
+          <h3>TRAFFIC JAM</h3>
+          <p>A packed field. Favours ram, shield&nbsp;+&nbsp;ghost.</p>
+        </li>
+        <li class="race race-technical">
+          <span class="glyph g-technical" aria-hidden="true"></span>
+          <h3>TECHNICAL</h3>
+          <p>Hairpin country. Favours brake&nbsp;+&nbsp;handling.</p>
+        </li>
+        <li class="race race-duel">
+          <span class="glyph g-duel" aria-hidden="true"></span>
+          <h3>DUEL</h3>
+          <p>One rival. No hiding. Winner takes a souvenir.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ====================== ARCHETYPES ====================== -->
+    <section id="builds" class="section section-alt">
+      <p class="kicker">THE DECK</p>
+      <h2>BUILD A MONSTER</h2>
+      <p class="section-lede"><span class="badge-113">113+ CARDS</span> across archetypes that
+         actually change how the car drives — plus one-shot consumables to spend like flares.</p>
+
+      <ul class="arch-list">
+        <li><span class="arch-chip chip-engine">ENGINE</span>
+            <p>Per-lap scaling. Slow-cooker builds that end the race untouchable.</p></li>
+        <li><span class="arch-chip chip-scrap">SCRAP</span>
+            <p>Get hit, get harder. Every crash feeds the plating.</p></li>
+        <li><span class="arch-chip chip-phantom">PHANTOM</span>
+            <p>Ghost straight through the pile-up. Stability is for cowards.</p></li>
+        <li><span class="arch-chip chip-sponsor">SPONSOR</span>
+            <p>Cash converts to horsepower. The paddock runs on money.</p></li>
+        <li><span class="arch-chip chip-sabotage">SABOTAGE</span>
+            <p>Loose wheels, sticky throttles. Their bad day, your podium.</p></li>
+        <li><span class="arch-chip chip-oneshot">ONE-SHOTS</span>
+            <p>Single-use consumables for the moment that matters.</p></li>
+      </ul>
+
+      <p class="garage-note">Win cups, bank prize money, and unlock new
+         <strong>paints&nbsp;&amp;&nbsp;patterns</strong> in the garage — your whole career
+         lives in one profile.</p>
+    </section>
+
+    <!-- ==================== PLAYTEST NOTE ==================== -->
+    <section id="playtest" class="section">
+      <div class="telemetry-note">
+        <h2 class="telemetry-title">PLAYTEST, HONESTLY</h2>
+        <p>Playtest builds share <strong>anonymous run data</strong> — races, cards,
+           crashes — so we can balance the game. You can toggle it off in the
+           settings any time, no hard feelings.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer">
+    <div class="checker-strip" aria-hidden="true"></div>
+    <p class="footer-line">
+      <span>&copy; 2026 SUPER-STATE</span>
+      <span class="dot" aria-hidden="true">&middot;</span>
+      <a href="https://github.com/super-state/super-slot-car-98">GITHUB</a>
+      <span class="dot" aria-hidden="true">&middot;</span>
+      <span>MADE WITH GODOT</span>
+      <span class="dot" aria-hidden="true">&middot;</span>
+      <!-- placeholder address: release script may rewrite -->
+      <a href="mailto:press@super-state.dev">PRESS &amp; CONTACT</a>
+    </p>
+    <p class="footer-fine">VT323 &amp; Silkscreen fonts, SIL Open Font License 1.1 —
+       the same faces the game runs on.</p>
+  </footer>
+
+  <script src="js/race.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
