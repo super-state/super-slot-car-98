@@ -255,6 +255,21 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
   transform: translate(4px, 5px);
   box-shadow: 0 0 0 3px var(--amber), 2px 2px 0 rgba(0, 0, 0, 0.55);
 }
+.btn-play {
+  background: var(--cyan);
+  box-shadow: 0 0 0 3px var(--cyan), 7px 8px 0 rgba(0, 0, 0, 0.55);
+}
+.btn-play:hover { background: #6fd8f8; }
+.btn-play:active { box-shadow: 0 0 0 3px var(--cyan), 2px 2px 0 rgba(0, 0, 0, 0.55); }
+.cta .btn-dl + .dl-meta { margin-bottom: 22px; }
+.see-all {
+  text-align: center;
+  font-family: var(--font-crt);
+  font-size: 20px;
+  margin-top: 26px;
+}
+.see-all a { color: var(--cyan); text-decoration: none; }
+.see-all a:hover { color: var(--amber); }
 .btn-glyph {
   display: inline-block;
   width: 0; height: 0;
