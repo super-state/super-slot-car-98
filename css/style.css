@@ -312,34 +312,22 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
   padding: 30px 0 26px;
 }
 .card {
+  /* The imgs are REAL in-game card renders (frame, banner, rules text all
+     baked in) — the wrapper stays chromeless and just fans them. */
   width: 200px;
   flex: 0 0 auto;
-  background: var(--panel);
-  border: 3px solid var(--ink-2);
-  box-shadow: 0 0 0 2px var(--panel-2), 6px 8px 0 rgba(0, 0, 0, 0.5);
-  padding: 8px 8px 10px;
   transition: transform 140ms ease, z-index 0s;
 }
 .card img {
-  border: 2px solid var(--ink-2);
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 7px 9px 0 rgba(0, 0, 0, 0.5);
   image-rendering: auto;
-}
-.card figcaption { display: block; padding-top: 8px; line-height: 1.15; }
-.card-name {
-  display: block;
-  font-family: var(--font-px);
-  font-size: 12px;
-  color: var(--gold);
-  margin-bottom: 5px;
-}
-.card-text {
-  display: block;
-  font-size: 17px;
-  color: var(--steel);
 }
 
 @media (min-width: 761px) {
-  .hand { position: relative; height: 360px; align-items: flex-start; }
+  .hand { position: relative; height: 430px; align-items: flex-start; }
   .card { position: absolute; top: 30px; }
   /* six-card fan */
   .card:nth-child(1) { transform: translateX(-330px) rotate(-14deg) translateY(34px); }
@@ -348,9 +336,9 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
   .card:nth-child(4) { transform: translateX(68px)   rotate(2.5deg); }
   .card:nth-child(5) { transform: translateX(200px)  rotate(8deg)   translateY(12px); }
   .card:nth-child(6) { transform: translateX(330px)  rotate(14deg)  translateY(34px); }
-  .card:hover, .card:focus-within {
-    z-index: 5;
-    box-shadow: 0 0 0 2px var(--amber), 10px 14px 0 rgba(0, 0, 0, 0.55);
+  .card:hover, .card:focus-within { z-index: 5; }
+  .card:hover img, .card:focus-within img {
+    box-shadow: 0 0 0 3px var(--amber), 10px 14px 0 rgba(0, 0, 0, 0.55);
   }
   .card:nth-child(1):hover { transform: translateX(-330px) rotate(-6deg) translateY(6px) scale(1.07); }
   .card:nth-child(2):hover { transform: translateX(-200px) rotate(-3deg) translateY(-10px) scale(1.07); }
@@ -627,6 +615,91 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
   color: var(--steel);
   padding: 0 16px;
 }
+
+/* ------------------------------------------- real-footage hero + clips */
+#hero-vid {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--ink-2);
+}
+.footage-tag {
+  margin: 0;
+  padding: 8px 12px 7px;
+  font-family: var(--font-px);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  background: var(--ink-2);
+  text-align: center;
+}
+.takedown-strip { margin-top: 44px; text-align: center; }
+.takedown-vid {
+  display: block;
+  width: min(720px, 100%);
+  height: auto;
+  margin: 0 auto;
+  border: 4px solid var(--ink-2);
+  box-shadow: 0 0 0 3px var(--panel-2), 7px 9px 0 rgba(0, 0, 0, 0.5);
+  background: var(--ink-2);
+}
+.takedown-cap {
+  margin-top: 14px;
+  font-family: var(--font-px);
+  font-size: 14px;
+  color: var(--hot, #e2493b);
+  letter-spacing: 0.08em;
+}
+.roster-note {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--steel);
+}
+
+/* ------------------------------------------------------------ gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+.shot {
+  margin: 0;
+  background: var(--panel);
+  border: 3px solid var(--ink-2);
+  box-shadow: 0 0 0 2px var(--panel-2), 6px 8px 0 rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+.shot img { display: block; width: 100%; height: auto; border: 2px solid var(--ink-2); }
+.shot figcaption {
+  padding: 10px 6px 4px;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--silver);
+}
+
+/* -------------------------------------------------------- quick facts */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+.facts > div {
+  background: var(--panel);
+  border: 3px solid var(--ink-2);
+  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.45);
+  padding: 14px 16px 12px;
+}
+.facts dt {
+  font-family: var(--font-px);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.facts dd { margin: 0; font-size: 19px; color: var(--paper, #f2f5f7); }
 
 /* --------------------------------------------------------- responsive */
 @media (max-width: 900px) {

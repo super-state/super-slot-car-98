@@ -27,4 +27,21 @@
       // Graceful fallback: keep the baked-in releases link.
       tag.textContent = 'free playtest build · latest release';
     });
+
+  // Real-footage clips: respect reduced-motion (poster stays, playback
+  // waits for an explicit click) and save battery in hidden tabs.
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video[autoplay]'));
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    vids.forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+      v.controls = true;
+    });
+  }
+  document.addEventListener('visibilitychange', function () {
+    vids.forEach(function (v) {
+      if (document.hidden) { v.pause(); }
+      else if (!v.controls) { v.play().catch(function () {}); }
+    });
+  });
 })();

@@ -21,6 +21,32 @@
   <meta name="twitter:description" content="A retro roguelike deckbuilder slot-car racer. Draft cards mid-race in slow motion and watch your toy car overtake, crash, feud and win. Free Windows playtest.">
   <meta name="twitter:image" content="https://superslotcar.com/assets/og.png">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "SUPER SLOT CAR '98",
+    "url": "https://superslotcar.com/",
+    "image": "https://superslotcar.com/assets/og.png",
+    "description": "A retro roguelike deckbuilder slot-car racer. You don't steer — you draft cards mid-race in slow motion and watch your toy car overtake, crash, feud and win.",
+    "genre": ["Roguelike", "Deck-building", "Racing", "Indie"],
+    "gamePlatform": "PC (Windows)",
+    "applicationCategory": "Game",
+    "operatingSystem": "Windows 10 or later",
+    "playMode": "SinglePlayer",
+    "author": {"@type": "Organization", "name": "super-state"},
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Free playtest build"}
+  }
+  </script>
+
+  <!-- Analytics: privacy-light Cloudflare Web Analytics beacon. To activate:
+       Cloudflare dash -> Analytics & Logs -> Web Analytics -> Add site
+       (superslotcar.com) -> copy the token into data-cf-beacon below and
+       remove the HTML comment wrappers. No cookies, no consent banner needed.
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
+  -->
+
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="preload" href="assets/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/VT323-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -48,14 +74,17 @@
     </p>
 
     <div class="race-wrap pixel-frame">
-      <canvas id="race" width="360" height="200"
-        role="img"
-        aria-label="Animated toy slot-car race: four chunky pixel cars lap a plastic oval. Card pickups pop up beside the red player car — nitro bursts, sabotage — rivals wobble, crash and respawn."></canvas>
-      <noscript>
-        <img class="race-fallback" src="assets/hero_fallback.png" width="720" height="400"
-          alt="Top-down toy race track. The red player car trails skid marks while a NITRO BURST card pops up beside it. Three rival cars give chase.">
-        <style>#race{display:none}</style>
-      </noscript>
+      <!-- REAL gameplay, captured from the actual build via Godot's movie
+           writer: a cup-2 TRAFFIC race, seven cars, real drafts + crashes. -->
+      <video id="hero-vid" width="960" height="540" autoplay muted loop playsinline
+        poster="assets/media/hero_poster.jpg"
+        aria-label="Real gameplay footage: a top-down seven-car slot-car race. The pit-board sidebar shows the driver standings and STRIKE ZONE warning while cards are drafted in slow motion and rivals crash.">
+        <source src="assets/media/hero.webm" type="video/webm">
+        <source src="assets/media/hero.mp4" type="video/mp4">
+        <img src="assets/media/hero_poster.jpg" width="960" height="540"
+          alt="Real gameplay: seven cars mid-race on a twisting lakeside circuit, driver standings on the pit board.">
+      </video>
+      <p class="footage-tag">ACTUAL IN-GAME FOOTAGE &middot; v0.1.0</p>
     </div>
 
     <div class="cta">
@@ -97,55 +126,21 @@
         </li>
       </ol>
 
-      <div class="hand" role="group" aria-label="A fanned hand of six cards from the game">
-        <figure class="card">
-          <img src="assets/cards/card_launch_control.png" width="512" height="512"
-            alt="Card art: a jet-engined dragster lighting its exhaust on the start line">
-          <figcaption>
-            <span class="card-name">LAUNCH CONTROL</span>
-            <span class="card-text">Gain +3 Acceleration. Instant response.</span>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/cards/card_nitro_burst.png" width="512" height="512"
-            alt="Card art: a race car trailing a huge flame plume down the straight">
-          <figcaption>
-            <span class="card-name">NITRO BURST</span>
-            <span class="card-text">Boost: +2.5 Top Speed for 6 seconds.</span>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/cards/card_guardian_angel.png" width="512" height="512"
-            alt="Card art: a car shrugging off a crash inside a halo of light">
-          <figcaption>
-            <span class="card-name">GUARDIAN ANGEL</span>
-            <span class="card-text">Gain 3 Shields. Practically bubble-wrapped.</span>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/cards/card_poltergeist.png" width="512" height="512"
-            alt="Card art: a ghostly skull looming over a car weaving through night traffic">
-          <figcaption>
-            <span class="card-name">POLTERGEIST</span>
-            <span class="card-text">Ghost for 15 seconds, but lose 0.5 Stability.</span>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/cards/card_demolition_derby.png" width="512" height="512"
-            alt="Card art: a muscle car ploughing through a smoking pile-up">
-          <figcaption>
-            <span class="card-name">DEMOLITION DERBY</span>
-            <span class="card-text">Ram for 12s. Scrap: every crash gives +0.5 Stability.</span>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/cards/card_grudge_match.png" width="512" height="512"
-            alt="Card art: two cars locked wheel to wheel into a corner">
-          <figcaption>
-            <span class="card-name">GRUDGE MATCH</span>
-            <span class="card-text">Ram for 10 seconds and gain a Shield.</span>
-          </figcaption>
-        </figure>
+      <!-- The ACTUAL cards, rendered straight out of the game (frame,
+           banner, rules text and all) — not mockups. -->
+      <div class="hand" role="group" aria-label="A fanned hand of six real cards rendered from the game">
+        <figure class="card"><img src="assets/cards/full_card_launch_control.webp" width="642" height="892" loading="lazy"
+          alt="LAUNCH CONTROL, a real in-game card: a jet-engined dragster lighting its exhaust. Rules text: Gain +3 Acceleration. Instant response."></figure>
+        <figure class="card"><img src="assets/cards/full_card_nitro_burst.webp" width="642" height="892" loading="lazy"
+          alt="NITRO BURST, a real in-game card with an orange boost banner: Boost: +2.5 Top Speed for 6 seconds."></figure>
+        <figure class="card"><img src="assets/cards/full_card_guardian_angel.webp" width="642" height="892" loading="lazy"
+          alt="GUARDIAN ANGEL, a rare in-game card: a car gliding through hazards under a halo. Rules text: Gain 3 Shields. Practically bubble-wrapped."></figure>
+        <figure class="card"><img src="assets/cards/full_card_poltergeist.webp" width="642" height="892" loading="lazy"
+          alt="POLTERGEIST, a real in-game card: Ghost for 15 seconds, but lose 0.5 Stability."></figure>
+        <figure class="card"><img src="assets/cards/full_card_demolition_derby.webp" width="642" height="892" loading="lazy"
+          alt="DEMOLITION DERBY, a real in-game card: Ram for 12 seconds. Scrap: every crash gives +0.5 Stability."></figure>
+        <figure class="card"><img src="assets/cards/full_card_grudge_match.webp" width="642" height="892" loading="lazy"
+          alt="GRUDGE MATCH, a real in-game card: Ram for 10 seconds and gain a Shield."></figure>
       </div>
     </section>
 
@@ -190,6 +185,19 @@
           <p>The end of the line. Bring a monster, or bring a mop.</p>
         </li>
       </ul>
+
+      <div class="takedown-strip">
+        <video width="720" height="405" autoplay muted loop playsinline
+          poster="assets/shots/showdown_vs.webp" class="takedown-vid"
+          aria-label="Real gameplay clip: a rival car is slammed off the track in crash slow motion — a TAKEDOWN.">
+          <source src="assets/media/takedown.webm" type="video/webm">
+          <source src="assets/media/takedown.mp4" type="video/mp4">
+        </video>
+        <p class="takedown-cap">This is what a grudge looks like when it lands. Real footage.</p>
+      </div>
+
+      <p class="roster-note">Cast portraits are hand-pixelled placeholders — every driver
+         gets full artwork as the cast is designed (portraits swap in without a patch).</p>
     </section>
 
     <!-- ====================== RACE TYPES ====================== -->
@@ -260,6 +268,60 @@
          lives in one profile.</p>
     </section>
 
+    <!-- ======================= GALLERY ======================= -->
+    <section id="gallery" class="section">
+      <p class="kicker">STRAIGHT FROM THE BUILD</p>
+      <h2>SCREENSHOTS</h2>
+      <div class="gallery">
+        <figure class="shot">
+          <img src="assets/shots/showdown_vs.webp" width="1280" height="720" loading="lazy"
+            alt="Boss showdown intro: YOU versus BARON BLITZ portrait cards over a night circuit, the pit board reading WIN OR STRIKE.">
+          <figcaption>Cup-3 showdown: just you and the Baron. Win or strike.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/media/shot_draft.webp" width="1280" height="720" loading="lazy"
+            alt="Mid-race card draft in slow motion: three cards fanned over a seven-car traffic race.">
+          <figcaption>The race dips into slow-mo, the deck deals you a choice.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shots/map_fork.webp" width="1280" height="720" loading="lazy"
+            alt="The overworld road map: the route forks between race-type nodes with laps, purse and favours shown on info cards.">
+          <figcaption>The road forks: every race type is a build test, telegraphed up front.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/media/shot_crash.webp" width="1280" height="720" loading="lazy"
+            alt="A crash mid-race: a car tumbles off the circuit trailing explosion pixels while the pack races on.">
+          <figcaption>Crashes are content. Some builds even profit from them.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shots/garage.webp" width="1280" height="720" loading="lazy"
+            alt="The garage screen: the player's car rendered large beside paint, pattern, stripe and wheel pickers.">
+          <figcaption>The garage: paints, patterns, stripes and wheels — your career's trophy wall.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shots/sponsor_gift.webp" width="1280" height="720" loading="lazy"
+            alt="The sponsor signing gift screen: three part tiles offering a choice of starting upgrade.">
+          <figcaption>Every run opens with the sponsor's signing gift: pick your season's shape.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====================== QUICK FACTS ====================== -->
+    <section id="facts" class="section section-alt">
+      <p class="kicker">THE SPEC SHEET</p>
+      <h2>QUICK FACTS</h2>
+      <dl class="facts">
+        <div><dt>PRICE</dt><dd>Free playtest build (for now)</dd></div>
+        <div><dt>PLATFORM</dt><dd>Windows 10+ &middot; 64-bit</dd></div>
+        <div><dt>A RUN</dt><dd>3 cups &middot; 9 races &middot; 30&ndash;45 minutes</dd></div>
+        <div><dt>CARDS</dt><dd>113+ and counting</dd></div>
+        <div><dt>THE FIELD</dt><dd>10 named rivals &middot; 3 bosses &middot; grudges included</dd></div>
+        <div><dt>ENGINE</dt><dd>Godot 4 &middot; solo dev + an AI pit crew</dd></div>
+        <div><dt>UPDATES</dt><dd>The build checks for new versions itself</dd></div>
+        <div><dt>MULTIPLAYER</dt><dd>No. The feud is personal.</dd></div>
+      </dl>
+    </section>
+
     <!-- ==================== PLAYTEST NOTE ==================== -->
     <section id="playtest" class="section">
       <div class="telemetry-note">
@@ -288,7 +350,6 @@
        the same faces the game runs on.</p>
   </footer>
 
-  <script src="js/race.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
