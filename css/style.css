@@ -386,8 +386,7 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
 }
 .roster img, .bosses img {
   width: 100%;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
   box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.45);
 }
 .roster li { transition: transform 120ms steps(3); }
