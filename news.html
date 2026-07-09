@@ -11,9 +11,9 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SUPER SLOT CAR '98">
   <meta property="og:title" content="PIT NOTES — SUPER SLOT CAR '98 dev updates">
-  <meta property="og:description" content="Development updates from the workshop. Latest: the pit board doubles in size and drops a beam of light on the rival it's talking about.">
+  <meta property="og:description" content="Development updates from the workshop. Latest: the race-entry card stops disguising its rewards as buttons, turns LET'S RACE green, and gets some juice on the way out.">
   <meta property="og:url" content="https://superslotcar.com/news.html">
-  <meta property="og:image" content="https://superslotcar.com/assets/news/journey1_title.webp">
+  <meta property="og:image" content="https://superslotcar.com/assets/news/race_card_after.webp">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
@@ -105,6 +105,61 @@
   </header>
 
   <main>
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="race-card-juice">
+      <p class="post-date">2026-07-09 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>FOUR BUTTONS, TWO OF THEM LIES</h2>
+
+      <p>Click a race on the map and a card slides up to introduce it: the crew
+         you'd be lining up against, the one thing you have to do to walk away
+         clean, what's in it for you, and the only question that matters &mdash;
+         want to race?</p>
+
+      <p>Trouble was, the card offered you four things that looked pressable and
+         only two of them were. The rewards &mdash; the card you'd win, the purse
+         &mdash; sat in the same bordered frames as the actual buttons. So there
+         they were, NEW CARD and PURSE, quietly inviting a click that did nothing.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/race_card_before.webp" width="1440" height="810"
+          alt="The old race-entry card: three rival portraits over an OBJECTIVE banner, then two reward boxes (NEW CARD and PURSE) drawn in the same bordered frames as the NOT YET and LET'S RACE buttons below them, so all four read as pressable."
+          loading="lazy">
+        <figcaption>Before. Two buttons, and two things doing a very good impression of buttons. NEW CARD is not clickable. It looked clickable.</figcaption>
+      </figure>
+
+      <p>So the rewards lost their borders. They're flat little pads now, a shade
+         lighter than the card behind them &mdash; itemised, so you can still tell
+         one prize from the next, but plainly a <em>list of what's on offer</em>
+         rather than a row of choices. And the two things you actually can press
+         finally look the part: NOT YET stays in the usual pit-lane orange, and
+         LET'S RACE turns <strong>go-green</strong>. Same size, side by side, so
+         neither one shouts over the other.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/race_card_after.webp" width="1440" height="810"
+          alt="The redesigned card: the same portraits and objective, but the rewards now sit in borderless flat pads, and the two buttons are equally sized — NOT YET in orange, LET'S RACE in bright green."
+          loading="lazy">
+        <figcaption>After. The rewards lie flat where they belong; the only two things you can press look like the only two things you can press. Green means go.</figcaption>
+      </figure>
+
+      <p>Then we gave the whole moment some <strong>juice</strong>. The card no
+         longer just appears &mdash; it fades up and pops into place, like it
+         arrived rather than blinked on. And saying yes is now an event of its
+         own: LET'S RACE flashes and chirps to tell you the click landed, the
+         entire card drops off the bottom of the screen, and only <em>then</em>
+         does your car pull away down the road.</p>
+
+      <p>That extra beat isn't only for show. While the card is dropping, the
+         race track is already loading in the background &mdash; so by the time
+         the car reaches the start line, the wipe cuts to a grid that's ready and
+         waiting instead of a half-second of held breath.</p>
+
+      <p>The small print: the races, the rivals and the rewards themselves are
+         exactly as they were. This was a pass on the <em>asking</em> &mdash;
+         which things you can touch, and what it feels like to say yes &mdash;
+         not on what you're being asked.</p>
+    </article>
+
     <!-- ============================ POST ============================ -->
     <article class="post" id="pit-board-spotlight">
       <p class="post-date">2026-07-08 <span class="status-chip">IN THE NEXT BUILD</span></p>
