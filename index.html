@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SUPER SLOT CAR '98 — your deck drives the car</title>
+  <title>SUPER SLOT CAR '98 — roguelike deckbuilder slot car racing game</title>
   <meta name="description" content="A retro roguelike deckbuilder slot-car racer — draft cards mid-race while your toy car does the driving. Free browser demo and Windows playtest build.">
   <meta name="theme-color" content="#0e141c">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -90,16 +90,18 @@
 
     <div class="race-wrap pixel-frame">
       <!-- REAL gameplay, captured from the actual build via Godot's movie
-           writer: a cup-2 TRAFFIC race, seven cars, real drafts + crashes. -->
+           writer: a cup-2 TRAFFIC race on the current dev build - real
+           drafts, real crashes, kerb cubes flying. Re-record via
+           tests/scratch_capture_race.gd whenever the game outgrows it. -->
       <video id="hero-vid" width="960" height="540" autoplay muted loop playsinline
         poster="assets/media/hero_poster.jpg"
-        aria-label="Real gameplay footage: a top-down seven-car slot-car race. The pit-board sidebar shows the driver standings and STRIKE ZONE warning while cards are drafted in slow motion and rivals crash.">
+        aria-label="Real gameplay footage: a top-down slot-car traffic race on a lakeside circuit. The race dips into slow motion for a three-card draft while the pit board tracks the named field, and crashes scatter kerb cubes across the grass.">
         <source src="assets/media/hero.webm" type="video/webm">
         <source src="assets/media/hero.mp4" type="video/mp4">
         <img src="assets/media/hero_poster.jpg" width="960" height="540"
-          alt="Real gameplay: seven cars mid-race on a twisting lakeside circuit, driver standings on the pit board.">
+          alt="Real gameplay: the race frozen in slow motion for a card draft — Step On It, Late Braker and Grip Wax fanned over a lakeside circuit, pit board standings on the left.">
       </video>
-      <p class="footage-tag">ACTUAL IN-GAME FOOTAGE &middot; v0.1.0</p>
+      <p class="footage-tag">ACTUAL IN-GAME FOOTAGE &middot; DEV BUILD, JULY 2026</p>
     </div>
 
     <div class="cta">
@@ -303,24 +305,24 @@
       <h2>SCREENSHOTS</h2>
       <div class="gallery">
         <figure class="shot">
-          <img src="assets/shots/showdown_vs.webp" width="1280" height="720" loading="lazy"
-            alt="Boss showdown intro: YOU versus BARON BLITZ portrait cards over a night circuit, the pit board reading WIN OR STRIKE.">
-          <figcaption>Cup-3 showdown: just you and the Baron. Win or strike.</figcaption>
+          <img src="assets/shots/showdown_grid.webp" width="1280" height="720" loading="lazy"
+            alt="The legend showdown: ON THE GRID banner over a three-card draft, the objective board reading BEAT DIESEL DAN OR STRIKE and Dan sitting second in the standings.">
+          <figcaption>The cup final: beat your legend on a full grid — or take the strike.</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/media/shot_draft.webp" width="1280" height="720" loading="lazy"
-            alt="Mid-race card draft in slow motion: three cards fanned over a seven-car traffic race.">
+            alt="Mid-race card draft in slow motion: Step On It, Grip Wax and Nitro Burst fanned over a twisting circuit while the pit board tracks the field.">
           <figcaption>The race dips into slow-mo, the deck deals you a choice.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/shots/map_fork.webp" width="1280" height="720" loading="lazy"
-            alt="The overworld road map: the route forks between race-type nodes with laps, purse and favours shown on info cards.">
-          <figcaption>The road forks: every race type is a build test, telegraphed up front.</figcaption>
+          <img src="assets/shots/map_arrival.webp" width="1280" height="720" loading="lazy"
+            alt="The living world map in a snow biome: the racer convoy arrives along the main road past labelled TECHNICAL and TRAFFIC JAM race stops, with the season dashboard across the top.">
+          <figcaption>A living world map per cup: the convoy drives in, and every stop is telegraphed.</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/media/shot_crash.webp" width="1280" height="720" loading="lazy"
-            alt="A crash mid-race: a car tumbles off the circuit trailing explosion pixels while the pack races on.">
-          <figcaption>Crashes are content. Some builds even profit from them.</figcaption>
+            alt="Crash aftermath mid-race: skid marks and scattered kerb cubes littering the circuit while the pack races on past the grandstand.">
+          <figcaption>Crashes are content — and now they leave evidence.</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/shots/garage_bodies.webp" width="1360" height="820" loading="lazy"
@@ -362,6 +364,34 @@
       </dl>
     </section>
 
+    <!-- ================== THE INSPIRATION SHELF ================== -->
+    <section id="inspiration" class="section section-alt">
+      <p class="kicker">THE INSPIRATION SHELF</p>
+      <h2>WHERE THIS GAME COMES FROM</h2>
+      <p class="section-lede">A roguelike deckbuilder, a racing game, and a
+         board-game brain in one toy box. If any of these are your thing,
+         you're in the right paddock.</p>
+      <dl class="facts">
+        <div><dt>HEAT: PEDAL TO THE METAL</dt>
+          <dd>The board game that lit the fuse. Heat's genius — racing as a
+              hand of cards, push your luck or cook your engine — is the itch
+              this game scratches in real time. Not a licensed adaptation; a
+              video-game-native answer to the same craving. (No affiliation —
+              just admiration. <a href="news/heat-on-the-workbench.html">The
+              full story&nbsp;&rarr;</a>)</dd></div>
+        <div><dt>SLAY THE SPIRE</dt>
+          <dd>The roguelike deckbuilder blueprint: short runs, a deck that is
+              your character, and one more draft that ruins your bedtime.</dd></div>
+        <div><dt>SLOT CARS &amp; MICRO MACHINES</dt>
+          <dd>Scalextric afternoons, top-down toy circuits, cars the size of a
+              thumb with grudges the size of a bus.</dd></div>
+        <div><dt>ONE-PERSON GARAGE</dt>
+          <dd>An indie game in the honest sense: one developer, an AI pit
+              crew, and a <a href="news.html">public dev diary</a> of every
+              step — shipped as a free playtest while it grows.</dd></div>
+      </dl>
+    </section>
+
     <!-- ===================== PIT NOTES TEASERS ===================== -->
     <section id="news" class="section">
       <p class="kicker">PIT NOTES</p>
@@ -370,23 +400,23 @@
          game is built — real screenshots, honest status chips, no roadmap fog.</p>
     <!-- PIT-NOTES:BEGIN generated by tools/site/sync_news.py - do not hand-edit -->
     <div class="news-teasers">
-      <a class="news-teaser" href="news.html#epic-gold-tier">
-        <img src="assets/news/epic_trio.webp" alt="" width="1440" height="668" loading="lazy" decoding="async">
+      <a class="news-teaser" href="/news/heat-on-the-workbench.html">
+        <img src="/assets/news/heat_draft_moment.webp" alt="A mid-race card draft in SUPER SLOT CAR &#x27;98: the race frozen in slow motion with three cards fanned over a top-down toy circuit, the pit board tracking the field on the left." width="1440" height="810" loading="lazy" decoding="async">
+        <span class="news-date">2026-07-15</span>
+        <span class="news-title">THE BOARD GAME ON THE WORKBENCH</span>
+        <span class="news-snip">People ask what this game actually is — a racing game with cards? A deckbuilder with wheels? Here's the honest origin: it exists because of Heat: Pedal to the Metal, the…</span>
+      </a>
+      <a class="news-teaser" href="/news/epic-gold-tier.html">
+        <img src="/assets/news/epic_trio.webp" alt="Three EPIC cards in molten-gold frames rendered from the game: Hero Fuel, Last Shall Be First, and Cursed Trophy, each with its rules text." width="1440" height="668" loading="lazy" decoding="async">
         <span class="news-date">2026-07-15</span>
         <span class="news-title">ELEVEN CARDS NOW WEAR THE MOLTEN GOLD</span>
-        <span class="news-snip">We sat down with all 128 cards and a pot of coffee and audited the lot — every stat, every price, every card that quietly won more runs than it had any right to. The&hellip;</span>
+        <span class="news-snip">We sat down with all 128 cards and a pot of coffee and audited the lot — every stat, every price, every card that quietly won more runs than it had any right to. The…</span>
       </a>
-      <a class="news-teaser" href="news.html#track-remembers">
-        <img src="assets/news/crash_wreckage_corner.webp" alt="" width="1440" height="810" loading="lazy" decoding="async">
+      <a class="news-teaser" href="/news/track-remembers.html">
+        <img src="/assets/news/crash_wreckage_corner.webp" alt="A traffic race mid-corner pile-up: cars bunched at the hairpin, kerb cubes scattered onto the grass and a fresh scar carved through the verge." width="1440" height="810" loading="lazy" decoding="async">
         <span class="news-date">2026-07-15</span>
         <span class="news-title">THE TRACK REMEMBERS EVERY CRASH</span>
-        <span class="news-snip">Crashes used to be fireworks: a bang, a tumble, and thirty seconds later the circuit looked like nothing had ever happened. That amnesia is cured. A car that goes off&hellip;</span>
-      </a>
-      <a class="news-teaser" href="news.html#rivals-play-real-decks">
-        <img src="assets/news/race_start_go.webp" alt="" width="1440" height="810" loading="lazy" decoding="async">
-        <span class="news-date">2026-07-15</span>
-        <span class="news-title">THE FIELD DRAFTS FOR REAL NOW</span>
-        <span class="news-snip">Confession time: until recently, the rivals were stat lines with faces. Convincing faces! But while you were agonising over a mid-corner draft, they were just...&hellip;</span>
+        <span class="news-snip">Crashes used to be fireworks: a bang, a tumble, and thirty seconds later the circuit looked like nothing had ever happened. That amnesia is cured. A car that goes off…</span>
       </a>
     </div>
     <p class="see-all"><a href="news.html">ALL PIT NOTES &rarr;</a></p>

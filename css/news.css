@@ -1,0 +1,103 @@
+/* PIT NOTES pages (index + per-post) — shared chrome, split out of news.html
+   so the generated post pages use the same look. Landing-page styles stay in
+   style.css. */
+
+.notes-hero {
+  text-align: center;
+  padding: 56px 20px 8px;
+}
+.notes-hero .back-link {
+  font-family: var(--font-px);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.notes-hero h1 {
+  font-family: var(--font-px);
+  font-size: clamp(30px, 6vw, 54px);
+  color: var(--amber);
+  text-shadow: 4px 4px 0 var(--ink-2);
+  margin: 18px 0 6px;
+}
+.notes-hero .sub {
+  color: var(--steel);
+  font-size: 22px;
+}
+
+/* ------------------------------------------------ full post article */
+.post {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 20px 24px;
+}
+.post-date {
+  font-family: var(--font-px);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+}
+.post h1.post-title,
+.post h2 {
+  font-family: var(--font-px);
+  font-size: clamp(20px, 3.4vw, 30px);
+  color: var(--white);
+  margin: 10px 0 16px;
+  line-height: 1.3;
+}
+.post p { margin: 0 0 16px; color: var(--silver); }
+.post p strong { color: var(--white); }
+.post figure { margin: 26px 0; }
+.post figcaption {
+  font-size: 17px;
+  color: var(--steel);
+  padding-top: 10px;
+  text-align: center;
+}
+.post .status-chip {
+  display: inline-block;
+  font-family: var(--font-px);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+  background: var(--amber);
+  padding: 4px 10px;
+  margin-left: 10px;
+  vertical-align: 2px;
+}
+.fleet-list {
+  columns: 2;
+  column-gap: 40px;
+  margin: 0 0 16px;
+  padding-left: 24px;
+  color: var(--silver);
+}
+.fleet-list li { margin-bottom: 6px; }
+.fleet-list b { color: var(--gold); font-weight: 400; }
+@media (max-width: 620px) { .fleet-list { columns: 1; } }
+
+/* --------------------------------------------- index card grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1180px;
+  margin: 34px auto 64px;
+  padding: 0 16px;
+}
+@media (max-width: 980px) { .notes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .notes-grid { grid-template-columns: 1fr; max-width: 560px; } }
+
+/* ---------------------------------------------- prev/next post nav */
+.post-nav {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 12px 20px 64px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-family: var(--font-crt);
+  font-size: 19px;
+}
+.post-nav a { color: var(--cyan); text-decoration: none; max-width: 44%; }
+.post-nav a:hover { color: var(--amber); }
+.post-nav .to-index { color: var(--steel); }
