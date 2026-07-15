@@ -11,10 +11,20 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SUPER SLOT CAR '98">
   <meta property="og:title" content="PIT NOTES — SUPER SLOT CAR '98 dev updates">
-  <meta property="og:description" content="Development updates from the workshop. Latest: race objectives now arrive on a clear pit board, before the lights go out.">
+  <meta property="og:description" content="Latest Pit Notes: cursed hardware arrives at the mystery stops — parts that get better every lap and charge for it — plus full controller support on events.">
   <meta property="og:url" content="https://superslotcar.com/news.html">
-  <meta property="og:image" content="https://superslotcar.com/assets/news/shop_till.webp">
+  <meta property="og:image" content="https://superslotcar.com/assets/news/cursed_engine_reveal.webp">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZK85GR478"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HZK85GR478');
+  </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="preload" href="assets/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -105,6 +115,230 @@
   </header>
 
   <main>
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="cursed-hardware">
+      <p class="post-date">2026-07-15 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>SOME ENGINES SHOULD STAY UNDER THE TARP.</h2>
+
+      <p>Mystery stops had a habit of taking your money and handing back a shrug — pay the toll, watch the purse shrink, drive on feeling like you picked the wrong road. That's gone. Every paid choice now pays something back: the tollbooth attendant's receipt has thirty years of corner notes scribbled on it, and the repo men will haul away any card you like once the debts are square. Consider it customer service.</p>
+
+      <p>And then there's the new shelf. Two events now deal <strong>cursed hardware</strong> — parts that are genuinely, worryingly good and never stop charging interest. The Cursed Engine adds top speed <em>every lap</em> while eating a little brake power <em>every lap</em>. The Banshee Turbine snowballs your launch while the whole car shakes. The Dead Man's Anchor refuses to crash and refuses to hurry. Bolt one in and your next ten races bend around it — suddenly the shield and feather cards you always skipped look like survival equipment.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/cursed_engine_reveal.webp" width="1440" height="810"
+          alt="The Mystery Stop outcome screen revealing the Cursed Engine hardware tile: every lap, +0.7 top speed and -0.4 brake power."
+          loading="lazy">
+        <figcaption>The seller wouldn't touch it. The seller was on to something.</figcaption>
+      </figure>
+
+      <p>The event screens also finally answer to a pad. The first choice you can afford lights up when you arrive, the D-pad or stick walks every button — including the take-a-card spreads and the card pickers — and once the dust settles, A or B takes you back to the paddock. Three-way choices keep their X/Y/B quick picks.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/event_pad_focus.webp" width="1440" height="810"
+          alt="A three-choice mystery event with X, Y and B controller glyphs over the choices and the first button highlighted by pad focus."
+          loading="lazy">
+        <figcaption>The suit accepts all major face buttons.</figcaption>
+      </figure>
+
+      <p>Two more notes from the same pass. On the world map, the glowing route used to retract in polite little bites a half-step behind your car; it now reels in like a fishing line, disappearing exactly under your wheels. And the cup showdown has stopped announcing the boss in text — their face on the card was already doing the talking.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/map_beam_reel_in.webp" width="1440" height="810"
+          alt="The world map mid-drive with the glowing route beginning exactly at the car and running ahead to the Endurance race node."
+          loading="lazy">
+        <figcaption>The beam now ends where the car begins. Cartography is thrilled.</figcaption>
+      </figure>
+
+      <p><strong>Small print:</strong> the five original event mods, event odds, and race rules are unchanged. Cursed hardware is event-only, never sold in shops, and — like all mods — never, ever comes back off.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="race-pressure-curve">
+      <p class="post-date">2026-07-14 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>CALM HANDS. RISING PRESSURE. CARDS EVERYWHERE.</h2>
+
+      <p>Our draft clock used to tighten by counting laps and, later, by repeatedly multiplying itself. That made a short sprint wait too long for the drama, an endurance race become exhausting halfway through, and a one-lap marathon miss the crescendo entirely. The clock was reading the format instead of reading the race.</p>
+
+      <p>Now the leader pulls the whole field through one shared pressure curve. The opening quarter leaves room to read the circuit and the hand. The middle steadily shortens the gap. The final ten percent becomes the card-flinging finish it was always trying to be — whether the flag is one lap away or seven.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/draft_progress_slowmo.webp" width="1440" height="810"
+          alt="Three upgrade cards spread over a live slot-car race during its slowed decision window."
+          loading="lazy">
+        <figcaption>The cars are still moving. They have simply agreed to do it very, very quietly while you read Grip Wax.</figcaption>
+      </figure>
+
+      <p>We also repaired the slow-motion itself. A recent loading change let the race spring back to full speed in the tiny gap before the cards appeared. Drafting once again starts at one-fifth speed and settles toward an almost frozen crawl, giving the choice weight without hard-pausing the circuit.</p>
+
+      <p>The final interval has a firm six-second floor: urgent, not unreadable. Race length, race type and pit-crew hardware still decide roughly how many opportunities arrive; progress only shapes when the pressure builds. The workshop DRAFT SPIRAL control remains connected for live tuning, but it now strengthens a bounded race curve instead of creating an endless multiplication table.</p>
+
+      <p><strong>Small print:</strong> card effects, offer size, deck cycling and post-race rewards are unchanged. Nobody has confiscated your right to stare at the middle card until the pit wall panics.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="three-cups-one-road-trip">
+      <p class="post-date">2026-07-13 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>THE SPONSOR SIGNS. THE WORLD OPENS.</h2>
+
+      <p>The signing gift used to finish with a polite stamp and then leave a stack of instructions taped across the top of the country. We have promoted the chosen hardware to a proper flash-and-punch reward moment, then moved the season briefing to one clean card that waits until your car reaches home.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/sponsor_champion_popup.webp" width="1440" height="810"
+          alt="A centred Your Road to the Title popup over the coastal world map with a Let's Go button."
+          loading="lazy">
+        <figcaption>One contract, three cups, and no laminated D-pad instructions nailed to the scenery.</figcaption>
+      </figure>
+
+      <p>Press LET'S GO and the map gets out of the way. The glowing route now vanishes behind the car as it drives — shops and roadside events included — while bridge legs only hang below horizontal roads and carry a small shadow into the water. The later cups also keep painting all the way to the far gate now; their third and fourth countries had been waiting for an old two-country camera crew.</p>
+
+      <p>Each cup has its own road trip with no repeats. Rookie keeps the familiar meadow and lakeside. Turbo climbs through snow, mountains and neon. Champion starts in the desert, passes the volcano, reaches town and takes one extremely questionable detour through <strong>SPECTRAL</strong>.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/spectral_world_map.webp" width="1440" height="810"
+          alt="The new Spectral world-map biome with deep violet space ground, cyan water and colourful star-like details beside the road."
+          loading="lazy">
+        <figcaption>Road maintenance assures us the violet void is load-bearing.</figcaption>
+      </figure>
+
+      <p>Race damage has had a rules tidy too. Dents still jam the live deck immediately, but the pit crew knocks them out after the race instead of carrying yesterday's crash forever. Cards whose effect already lasts to the flag can now carry EXHAUST: play the copy once, remove it from this race's piles, and get it back next race. Phantom Finish is first through that door.</p>
+
+      <p>The title crossroad has become an honest crossroad as well: lighter traffic runs both horizontally and vertically beneath the yellow crash wash. If two cars actually meet, they spin out like everyone else instead of pretending they are decorative.</p>
+
+      <p><strong>Small print:</strong> permanent card tuning, ordinary card cycling, cup prizes and race difficulty are unchanged. Spectral is a new destination, not a fourth cup.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="moon-frog-green-light">
+      <p class="post-date">2026-07-13 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>MOON FROG, THEN MAYHEM</h2>
+
+	  <p>The cabinet used to wake up halfway through its own lap. The track arrived first, one car took the scenic route around a corner, and a cold scenery build could turn that big entrance into a small judder. It needed a proper studio card and a much worse driving decision.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/moon_frog_boot_splash.webp" width="1440" height="810"
+          alt="The pixel-art Moon Frog studio logo centred on a deep navy startup screen."
+          loading="lazy">
+        <figcaption>The frog has checked the moon, the plugs and at least one suspicious fuse. We may proceed.</figcaption>
+      </figure>
+
+	  <p>Now Moon Frog fades up from black on a deep navy card while the opening is prepared behind it. The card only begins its long dissolve when the real track is ready and already moving, so the studio mark melts directly into the first race shot instead of handing us a black frame.</p>
+
+      <figure class="pixel-frame">
+		<img src="assets/news/neck_and_neck_title_opening.webp" width="1440" height="810"
+		  alt="Red and blue slot cars racing neck-and-neck through a squeeze with bright high-speed trails on the title screen's long horizontal straight."
+		  loading="lazy">
+		<figcaption>Two lanes, two hot motors and exactly one shared belief that the crossroad will probably be fine.</figcaption>
+      </figure>
+
+	  <p>The new opening holds a much tighter shot on two cars tearing door-to-door across a straight more than four times longer than the first attempt. Hot wheel glow and coloured trails now sell proper 15-speed-plus pace, the miniature lens bites harder, and the pair briefly stagger themselves through the squeeze and crossover instead of attempting to occupy the same six centimetres of road. Then a third car appears on the north rail with impeccable timing and no apparent brakes.</p>
+
+	  <figure class="pixel-frame">
+		<img src="assets/news/crossroad_crash_title.webp" width="1440" height="810"
+		  alt="The Super Slot Car 98 Edition logo and Press Space prompt over a yellow slow-motion crossroad crash while more racers streak through behind it."
+		  loading="lazy">
+		<figcaption>The race has been paused at the exact moment everyone involved begins updating their insurance details.</figcaption>
+	  </figure>
+
+	  <p>Impact now lands with the full boom, collision crack and screaming tyres. The world drops into the real yellow takedown flood and all three cars keep spinning in deep slow motion — without painting permanent dirt skids over the title card. The logo settles over the wreck with PRESS START while lighter crossroad traffic keeps moving horizontally and vertically beneath the yellow. Same-lane catches and genuine crossroad meetings become proper spinning fly-offs instead of cars ghosting through each other.</p>
+
+	  <p>We also cleared the duplicate name and instructions off the menu's top-left corner, and stopped Tile Studio or Settings from stretching the panel whenever they gain focus.</p>
+
+	  <p><strong>Small print:</strong> every menu destination and every actual race rule is unchanged. The pile-up is a title-screen stunt performed by trained six-centimetre professionals.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="paused-miniature-workbench">
+      <p class="post-date">2026-07-13 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>FREEZE THE RACE. MOVE THE CAMERA.</h2>
+
+      <p>The miniature controls were technically live, but the race was not especially interested in holding still while you used them. Cars carried on with their afternoon, drafts could arrive over the sliders, and the pause menu sat across the very picture you were trying to tune.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/race_miniature_tuning.webp" width="1440" height="810"
+          alt="A frozen Super Slot Car race with the Miniature Race tuning panel visible at the right and the circuit unobstructed behind it."
+          loading="lazy">
+        <figcaption>The cars have been asked to remain exactly where they are while we adjust the tiny expensive camera.</figcaption>
+      </figure>
+
+      <p>Now MINIATURE FX opens a proper inspection bench. The race, its timers and any incoming card draft are frozen solid; the ordinary pause card gets out of the way; and every slider lands directly on the live race picture. Right-drag the circuit, roll the wheel to zoom around the pointer, or use the right stick and triggers from the sofa.</p>
+
+      <p>The sharp area is also bolted to the player's car now. Focus X and Y set an offset around the car rather than a fixed patch of television glass, so the miniature lens follows through corners, camera moves and zooms instead of leaving the driver to wander into the fuzzy scenery.</p>
+
+      <p>Close the tuning card and the camera returns to its racing position, but the game stays paused. Only RESUME puts the cars back to work. We have also retired the ancient emergency world map: if the living country ever fails to initialise, the game says so and offers a retry instead of quietly opening the museum exhibit.</p>
+
+      <p><strong>Small print:</strong> no race rules, car speeds, draft timing or miniature presets changed. This is the same effect and the same race, now willing to sit for a photograph.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="worldmap-ready-on-arrival">
+      <p class="post-date">2026-07-10 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>THE COUNTRY GETS THERE BEFORE YOU DO</h2>
+
+      <p>The road map had developed an unfortunate habit of keeping the checker curtain shut while the whole country found its trousers. Pressing START should feel like pressing START, not submitting a planning application for a forest.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/worldmap_ready_on_arrival.webp" width="1440" height="810"
+          alt="The Sponsor Signing Gift panel appearing immediately over a simple dark blue ocean backdrop after starting a new run."
+          loading="lazy">
+        <figcaption>The sponsor has paperwork. The countryside is getting dressed behind the ocean.</figcaption>
+      </figure>
+
+      <p>Now the signing gift arrives with the transition, before the world map even exists. Behind it is an extremely cheap ocean cover made from a few flat blue bands and foam streaks, so the first frame is immediate and there is no half-built country showing through a blur. On the next frame the real starting coast begins preparing completely out of sight.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/worldmap_revealed_after_signing.webp" width="1440" height="810"
+          alt="The detailed Super Slot Car coastal world map shown sharply after the sponsor gift has been selected and its overlay has disappeared."
+          loading="lazy">
+        <figcaption>Signed, stamped, scenery present. Now pick a road and make the sponsor nervous.</figcaption>
+      </figure>
+
+      <p>Signing pulls the whole contract-and-ocean scene down like a stage curtain, revealing the prepared starting coast at full detail. Moving the camera still calls the next screenful to the bench first, and trips to a race, shop or suspicious roadside question mark keep the same country warm for the return journey. Mouse players get clean cards with ordinary hover-and-click selection; the X/Y/B badges only appear after controller input takes over.</p>
+
+      <p><strong>Small print:</strong> no loading screen, no blurry pop-in, no shorter map, no lower-resolution terrain and no missing decorations. This is the same world, arriving in a much more useful order.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="arcade-juice">
+      <p class="post-date">2026-07-10 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>EVERY CLICK GETS A CLACK</h2>
+
+      <p>The cars already knew how to make a scene. The quieter bits around them did not. Some buttons landed like damp cardboard, a clean overtake could happen without so much as a cough, and the title-screen pile-ups were apparently taking place inside a library.</p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/arcade_juice_final_lap.webp" width="1440" height="810"
+          alt="A Super Slot Car race on its final lap with a large amber FINAL LAP banner and compact gold-and-white impact rings around the player car."
+          loading="lazy">
+        <figcaption>The bell says final lap. The little gold car says this seemed like a safer idea in the garage.</figcaption>
+      </figure>
+
+      <p>Now the whole cabinet speaks the same crunchy arcade language: focus ticks, button clacks, back blips and a proper unhappy thunk when the till says no. A successful buy flashes the card white, throws its exact cost straight off the shelf and answers with one cheerful rising sparkle. The garage, deck and reference screens also keep the radio with them instead of wandering off into silence.</p>
+
+      <p>On track, passes chirp, crossovers snap, shields ring, boosts spool up and the last lap gets a bright arcade chirp instead of a funeral bell. A picked card flashes white in the click frame before it flies, while the matching streaks and checker bursts stay short and directional so they point at what happened without papering over the racing line.</p>
+
+      <p><strong>Small print:</strong> no new songs and no extra pauses. The cars, cards and race rules are unchanged; they have simply stopped being shy about what they are doing.</p>
+    </article>
+
+    <!-- ============================ POST ============================ -->
+    <article class="post" id="controller-counter">
+      <p class="post-date">2026-07-10 <span class="status-chip">IN THE NEXT BUILD</span></p>
+      <h2>THE CONTROLLER GETS A PIT PASS</h2>
+
+      <p>We were pretending a controller could get around the garage. It could, technically. In practice, the Pit Shop was a wall of lovely things with no clear answer to the most important question: <strong>which shiny thing am I about to buy?</strong></p>
+
+      <figure class="pixel-frame">
+        <img src="assets/news/controller_shop_selector.webp" width="1440" height="810"
+          alt="The Super Slot Car Pit Shop with a bright amber and cyan corner selector framing the leftmost card, while the controller legend is visible in the lower-right corner."
+          loading="lazy">
+        <figcaption>There. That one. The card with the dangerous optimism and the price tag.</figcaption>
+      </figure>
+
+      <p>Now the D-pad walks across every card, hardware tile, the scrap desk and the exit, with an animated corner frame bolted around the current choice. A buys it. No mouse audition required.</p>
+
+      <p>The same pass puts X, Y and B directly on three-way offers, gives world-map roads a proper target ring, and adds a little set of corner brackets while the right stick pans the map. During the race, the D-pad can now continue down the timing board through your stats, hardware and live effects, with a plain-English readout alongside. Start pauses; RT reveals the track during a draft and skips a post-race reward.</p>
+
+      <p><strong>Small print:</strong> prices, stock and race rules have not changed. We have only removed the part where your thumbs had to ask permission from your mouse.</p>
+    </article>
+
     <!-- ============================ POST ============================ -->
     <article class="post" id="race-objective">
       <p class="post-date">2026-07-09 <span class="status-chip">IN THE NEXT BUILD</span></p>
@@ -457,5 +691,6 @@
       <a href="mailto:press@super-state.dev">PRESS &amp; CONTACT</a>
     </p>
   </footer>
+  <script src="js/analytics.js" defer></script>
 </body>
 </html>

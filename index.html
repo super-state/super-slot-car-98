@@ -39,13 +39,15 @@
   }
   </script>
 
-  <!-- Analytics: privacy-light Cloudflare Web Analytics beacon. To activate:
-       Cloudflare dash -> Analytics & Logs -> Web Analytics -> Add site
-       (superslotcar.com) -> copy the token into data-cf-beacon below and
-       remove the HTML comment wrappers. No cookies, no consent banner needed.
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
-  -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZK85GR478"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HZK85GR478');
+  </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="preload" href="assets/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -373,5 +375,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/analytics.js" defer></script>
 </body>
 </html>
