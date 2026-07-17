@@ -17,10 +17,12 @@
   <meta property="og:image" content="https://superslotcar.com/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SUPER SLOT CAR '98 logo over the tagline YOUR DECK DRIVES THE CAR, with three pixel-art racer portraits.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SUPER SLOT CAR '98 — your deck drives the car">
   <meta name="twitter:description" content="A retro roguelike deckbuilder slot-car racer. Draft cards mid-race in slow motion and watch your toy car overtake, crash, feud and win. Free Windows playtest.">
   <meta name="twitter:image" content="https://superslotcar.com/assets/og.png">
+  <meta name="twitter:image:alt" content="SUPER SLOT CAR '98 logo over the tagline YOUR DECK DRIVES THE CAR, with three pixel-art racer portraits.">
 
   <script type="application/ld+json">
   {
@@ -36,7 +38,23 @@
     "operatingSystem": "Windows 10 or later",
     "playMode": "SinglePlayer",
     "author": {"@type": "Organization", "name": "super-state"},
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Free playtest build"}
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Free playtest build"},
+    "screenshot": [
+      "https://superslotcar.com/assets/media/shot_draft.webp",
+      "https://superslotcar.com/assets/shots/showdown_grid.webp",
+      "https://superslotcar.com/assets/shots/map_arrival.webp",
+      "https://superslotcar.com/assets/media/shot_crash.webp"
+    ],
+    "trailer": {
+      "@type": "VideoObject",
+      "name": "SUPER SLOT CAR '98 — real gameplay footage",
+      "description": "A top-down slot-car race on the current dev build: slow-motion card drafts, overtakes and crashes with flying kerb cubes.",
+      "thumbnailUrl": "https://superslotcar.com/assets/media/hero_poster.jpg",
+      "contentUrl": "https://superslotcar.com/assets/media/hero.mp4",
+      "encodingFormat": "video/mp4",
+      "uploadDate": "2026-07-17",
+      "duration": "PT26S"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -65,6 +83,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/VT323-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/logo.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -76,8 +95,8 @@
     <p class="presents">SUPER-STATE PRESENTS</p>
 
     <h1 class="logo">
-      <span class="logo-super">SUPER</span>
-      <span class="logo-main">SLOT&nbsp;CAR<span class="logo-badge" aria-label=" 98">'98</span></span>
+      <img src="assets/logo.webp" width="1280" height="522"
+        alt="SUPER SLOT CAR '98 EDITION" fetchpriority="high" decoding="async">
     </h1>
 
     <p class="tagline">YOUR DECK DRIVES THE CAR</p>
@@ -96,10 +115,12 @@
       <video id="hero-vid" width="960" height="540" autoplay muted loop playsinline
         poster="assets/media/hero_poster.jpg"
         aria-label="Real gameplay footage: a top-down slot-car traffic race on a lakeside circuit. The race dips into slow motion for a three-card draft while the pit board tracks the named field, and crashes scatter kerb cubes across the grass.">
-        <source src="assets/media/hero.webm" type="video/webm">
+        <!-- mp4 ONLY: desktop Chromium hit hard VP9 decode errors on the
+             webm (frozen at frame 0) even on a fresh encode, and the webm
+             wasn't smaller anyway. H.264 decodes everywhere. -->
         <source src="assets/media/hero.mp4" type="video/mp4">
         <img src="assets/media/hero_poster.jpg" width="960" height="540"
-          alt="Real gameplay: the race frozen in slow motion for a card draft — Step On It, Late Braker and Grip Wax fanned over a lakeside circuit, pit board standings on the left.">
+          alt="Real gameplay: the race frozen in slow motion for a card draft — Step On It, Nitro Burst and Late Braker fanned over a lakeside circuit, pit board standings on the left.">
       </video>
       <p class="footage-tag">ACTUAL IN-GAME FOOTAGE &middot; DEV BUILD, JULY 2026</p>
     </div>
@@ -215,12 +236,11 @@
 
       <div class="takedown-strip">
         <video width="720" height="405" autoplay muted loop playsinline
-          poster="assets/shots/showdown_vs.webp" class="takedown-vid"
-          aria-label="Real gameplay clip: a rival car is slammed off the track in crash slow motion — a TAKEDOWN.">
-          <source src="assets/media/takedown.webm" type="video/webm">
+          poster="assets/media/takedown_poster.jpg" class="takedown-vid"
+          aria-label="Real gameplay clip: TURBO TERRY slams the player car off the track, and his grinning callout pops up — TURBO TERRY TOOK YOU DOWN! OOP! SORRY! NOT SORRY!">
           <source src="assets/media/takedown.mp4" type="video/mp4">
         </video>
-        <p class="takedown-cap">This is what a grudge looks like when it lands. Real footage.</p>
+        <p class="takedown-cap">This is what a grudge looks like when it lands. Real footage — his words, not ours.</p>
       </div>
 
       <p class="roster-note">The full cast, hand-painted in Mega-Drive style — every rival and
@@ -311,7 +331,7 @@
         </figure>
         <figure class="shot">
           <img src="assets/media/shot_draft.webp" width="1280" height="720" loading="lazy"
-            alt="Mid-race card draft in slow motion: Step On It, Grip Wax and Nitro Burst fanned over a twisting circuit while the pit board tracks the field.">
+            alt="Mid-race card draft in slow motion: Step On It, Apex Hunter and Grip Wax fanned over a lakeside circuit while the pit board tracks the field.">
           <figcaption>The race dips into slow-mo, the deck deals you a choice.</figcaption>
         </figure>
         <figure class="shot">
@@ -325,9 +345,9 @@
           <figcaption>Crashes are content — and now they leave evidence.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/shots/garage_bodies.webp" width="1360" height="820" loading="lazy"
-            alt="The garage screen: ten body-type thumbnails from CLASSIC and GT PROTOTYPE to PANEL VAN and BUG, above paint, pattern, stripe and wheel pickers, with the car lapping a preview loop.">
-          <figcaption>The garage: ten body types, paints, patterns, stripes and wheels — your career's trophy wall.</figcaption>
+          <img src="assets/shots/garage_dashboard.webp" width="1600" height="900" loading="lazy"
+            alt="The garage dashboard at level 11, rank ACE with 7 wins: the car rolling on the preview stage beside BODY, PAINT, TRIM, TRAIL and ROAD tabs, locked body types queued at LV 14 to 23 and a NEXT UNLOCK ticker.">
+          <figcaption>The garage: a five-page pit-wall dashboard — bodies, paints, trims, trails and the reward road, with your career rank over the door.</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/shots/sponsor_gift.webp" width="1280" height="720" loading="lazy"

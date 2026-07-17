@@ -165,41 +165,11 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
   color: var(--steel);
   margin: 34px 16px 18px;
 }
-.logo { line-height: 0.95; }
-.logo-super {
-  display: block;
-  font-family: var(--font-px);
-  font-size: clamp(20px, 4.5vw, 38px);
-  letter-spacing: 0.55em;
-  text-indent: 0.55em; /* recentre tracked text */
-  color: var(--cyan);
-  text-shadow: 3px 3px 0 var(--ink-2);
-  margin-bottom: 6px;
-}
-.logo-main {
-  position: relative;
-  display: inline-block;
-  font-family: var(--font-px);
-  font-size: clamp(44px, 11vw, 108px);
-  color: var(--amber);
-  text-shadow:
-    0.045em 0.045em 0 var(--ink-2),
-    0.09em 0.09em 0 rgba(255, 75, 62, 0.35);
-  padding-right: 0.15em;
-}
-.logo-badge {
-  position: absolute;
-  top: -0.58em;
-  right: -0.5em;
-  display: inline-block;
-  font-size: 0.42em;
-  color: var(--white);
-  background: var(--red);
-  border: 4px solid var(--ink-2);
-  padding: 0.12em 0.22em 0.06em;
-  transform: rotate(-8deg);
-  text-shadow: none;
-  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.45);
+.logo { line-height: 0; margin: 0 auto; }
+.logo img {
+  width: min(92vw, 660px);
+  height: auto;
+  filter: drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35));
 }
 .tagline {
   font-family: var(--font-px);
@@ -723,7 +693,6 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
 @media (max-width: 640px) {
   body { font-size: 19px; }
   .section { padding: 56px 16px 60px; }
-  .logo-badge { top: -0.72em; right: -0.12em; border-width: 3px; }
   .race-grid { grid-template-columns: 1fr; }
   .btn-dl { font-size: 15px; padding: 15px 16px 13px; }
   .btn-glyph { margin-right: 10px; }
