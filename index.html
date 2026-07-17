@@ -37,7 +37,7 @@
     "applicationCategory": "Game",
     "operatingSystem": "Windows 10 or later",
     "playMode": "SinglePlayer",
-    "author": {"@type": "Organization", "name": "super-state"},
+    "author": {"@type": "Organization", "name": "Moon Frog"},
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Free playtest build"},
     "screenshot": [
       "https://superslotcar.com/assets/media/shot_draft.webp",
@@ -48,12 +48,12 @@
     "trailer": {
       "@type": "VideoObject",
       "name": "SUPER SLOT CAR '98 — real gameplay footage",
-      "description": "A top-down slot-car race on the current dev build: slow-motion card drafts, overtakes and crashes with flying kerb cubes.",
+      "description": "A top-down slot-car race on the current dev build: a multi-car pile-up, a slow-motion TAKEDOWN as the player is slammed off, and a three-card draft whose pick folds up and flies into the car.",
       "thumbnailUrl": "https://superslotcar.com/assets/media/hero_poster.jpg",
       "contentUrl": "https://superslotcar.com/assets/media/hero.mp4",
       "encodingFormat": "video/mp4",
       "uploadDate": "2026-07-17",
-      "duration": "PT26S"
+      "duration": "PT32S"
     }
   }
   </script>
@@ -92,7 +92,7 @@
   <!-- ============================== HERO ============================== -->
   <header class="hero">
     <div class="checker-strip" aria-hidden="true"></div>
-    <p class="presents">SUPER-STATE PRESENTS</p>
+    <p class="presents">MOON FROG PRESENTS</p>
 
     <h1 class="logo">
       <img src="assets/logo.webp" width="1280" height="522"
@@ -114,13 +114,13 @@
            tests/scratch_capture_race.gd whenever the game outgrows it. -->
       <video id="hero-vid" width="960" height="540" autoplay muted loop playsinline
         poster="assets/media/hero_poster.jpg"
-        aria-label="Real gameplay footage: a top-down slot-car traffic race on a lakeside circuit. The race dips into slow motion for a three-card draft while the pit board tracks the named field, and crashes scatter kerb cubes across the grass.">
+        aria-label="Real gameplay footage: a top-down slot-car traffic race on a lakeside circuit. A four-car pile-up opens the clip, the player is slammed off in a yellow TAKEDOWN slow-motion flood, then the race freezes for a three-card draft and the picked card folds up and flies into the car as a white spark.">
         <!-- mp4 ONLY: desktop Chromium hit hard VP9 decode errors on the
              webm (frozen at frame 0) even on a fresh encode, and the webm
              wasn't smaller anyway. H.264 decodes everywhere. -->
         <source src="assets/media/hero.mp4" type="video/mp4">
         <img src="assets/media/hero_poster.jpg" width="960" height="540"
-          alt="Real gameplay: the race frozen in slow motion for a card draft — Step On It, Nitro Burst and Late Braker fanned over a lakeside circuit, pit board standings on the left.">
+          alt="Real gameplay: the race frozen in slow motion for a card draft — Late Braker, Grip Wax and Apex Hunter fanned over the pack bunched at a railway crossing, pit board standings on the left.">
       </video>
       <p class="footage-tag">ACTUAL IN-GAME FOOTAGE &middot; DEV BUILD, JULY 2026</p>
     </div>
@@ -237,7 +237,7 @@
       <div class="takedown-strip">
         <video width="720" height="405" autoplay muted loop playsinline
           poster="assets/media/takedown_poster.jpg" class="takedown-vid"
-          aria-label="Real gameplay clip: TURBO TERRY slams the player car off the track, and his grinning callout pops up — TURBO TERRY TOOK YOU DOWN! OOP! SORRY! NOT SORRY!">
+          aria-label="Real gameplay clip: LADY LUGNUT slams the player car off the track, and her callout card pops up with her portrait — LADY LUGNUT TOOK YOU DOWN! A TRIFLE UNTIDY. YOU, NOT ME.">
           <source src="assets/media/takedown.mp4" type="video/mp4">
         </video>
         <p class="takedown-cap">This is what a grudge looks like when it lands. Real footage — his words, not ours.</p>
@@ -331,8 +331,8 @@
         </figure>
         <figure class="shot">
           <img src="assets/media/shot_draft.webp" width="1280" height="720" loading="lazy"
-            alt="Mid-race card draft in slow motion: Step On It, Apex Hunter and Grip Wax fanned over a lakeside circuit while the pit board tracks the field.">
-          <figcaption>The race dips into slow-mo, the deck deals you a choice.</figcaption>
+            alt="Mid-race card draft in slow motion: Gear Shift, Late Braker and Grip Wax fanned over the pack as it bunches at a railway level crossing, pit board tracking the field on the left.">
+          <figcaption>The race dips into slow-mo, the deck deals you a choice — the level crossing will not be waiting.</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/shots/map_arrival.webp" width="1280" height="720" loading="lazy"
@@ -341,7 +341,7 @@
         </figure>
         <figure class="shot">
           <img src="assets/media/shot_crash.webp" width="1280" height="720" loading="lazy"
-            alt="Crash aftermath mid-race: skid marks and scattered kerb cubes littering the circuit while the pack races on past the grandstand.">
+            alt="Crash aftermath mid-race: a long brown scar torn through the field beside the railway line, kerb cubes knocked loose at the corner while the pack races on.">
           <figcaption>Crashes are content — and now they leave evidence.</figcaption>
         </figure>
         <figure class="shot">
@@ -458,7 +458,7 @@
   <footer class="footer">
     <div class="checker-strip" aria-hidden="true"></div>
     <p class="footer-line">
-      <span>&copy; 2026 SUPER-STATE</span>
+      <span>&copy; 2026 MOON FROG</span>
       <span class="dot" aria-hidden="true">&middot;</span>
       <a href="news.html">PIT NOTES</a>
       <span class="dot" aria-hidden="true">&middot;</span>
@@ -468,8 +468,8 @@
       <span class="dot" aria-hidden="true">&middot;</span>
       <span>MADE WITH GODOT</span>
       <span class="dot" aria-hidden="true">&middot;</span>
-      <!-- placeholder address: release script may rewrite -->
-      <a href="mailto:press@super-state.dev">PRESS &amp; CONTACT</a>
+      <!-- press inbox TBD post-rebrand: route contact through GitHub for now -->
+      <a href="https://github.com/super-state/super-slot-car-98/issues">PRESS &amp; CONTACT</a>
     </p>
     <p class="footer-fine">VT323 &amp; Silkscreen fonts, SIL Open Font License 1.1 —
        the same faces the game runs on.</p>

@@ -169,6 +169,7 @@ h3 { font-family: var(--font-px); line-height: 1.2; }
 .logo img {
   width: min(92vw, 660px);
   height: auto;
+  margin-inline: auto; /* img is display:block via the global reset */
   filter: drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35));
 }
 .tagline {
