@@ -1,7 +1,7 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.0",
   "download_url": "https://github.com/super-state/super-slot-car-98/releases/latest",
-  "direct_zip": "https://github.com/super-state/super-slot-car-98/releases/download/v0.2.1/SuperSlotCar98_v0.2.1_win64.zip",
+  "direct_zip": "https://github.com/super-state/super-slot-car-98/releases/download/v0.3.0/SuperSlotCar98_v0.3.0_win64.zip",
   "telemetry_endpoint": "https://script.google.com/macros/s/AKfycbyf914YkOR2QzyfNzYzfYPkslihOPNxXlHDYAi52beB1gzOvyX3ciOklPdaV_HJY6GYRA/exec",
   "message": "Paddock preview."
 }
